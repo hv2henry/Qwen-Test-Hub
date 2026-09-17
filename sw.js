@@ -3,8 +3,15 @@
  * app. Only ever registered from http(s); opening index.html straight off disk
  * skips it, and everything still works.
  */
-const CACHE = "notes-shell-v1";
-const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
+const CACHE = "notes-shell-v2";
+const SHELL = [
+  "./",
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./manifest.webmanifest",
+  "./icon.svg"
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
